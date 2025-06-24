@@ -189,9 +189,11 @@ while (true) {
 }
 // Ejemplo: suponer que ya has contado cuántos productos se han actualizado
 $fecha = date("Y-m-d H:i:s");
-$productos_actualizados = ($productosActualizados); // o el valor correspondiente
+$productos_actualizados = $procesados;
+
 
 $mensaje_log = "[$fecha] Sincronización completada. Productos actualizados: $productos_actualizados" . PHP_EOL;
 file_put_contents(__DIR__ . '/log_sync.txt', $mensaje_log, FILE_APPEND);
 
 echo "🎯 Proceso completado. Total productos procesados: $procesados\n";
+exit;
